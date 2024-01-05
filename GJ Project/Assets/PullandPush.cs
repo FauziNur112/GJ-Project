@@ -29,11 +29,13 @@ public class PullandPush : MonoBehaviour
                         box.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
             */
             box.GetComponent<HingeJoint2D>().enabled = true;
+            box.GetComponent<BoxPull>().beingPushed = true;
             box.GetComponent<HingeJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
         } else if (Input.GetKeyUp(KeyCode.E))
         {
             /*            box.GetComponent<FixedJoint2D>().enabled = false;*/
             box.GetComponent<HingeJoint2D>().enabled = false;
+            box.GetComponent<BoxPull>().beingPushed = false;
         }
     
     }
