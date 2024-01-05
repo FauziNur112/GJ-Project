@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
     Vector2 movement;
     public Rigidbody2D rb;
     public float moveSpeed = 5f;
+    public bool facingright = true;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,15 @@ public class PlayerMove : MonoBehaviour
 
         movement = new Vector2(horizontalInput, verticalInput).normalized;
 
+        if (horizontalInput > 0 && !facingright)
+        {
+            flip();
+        }
+        if (horizontalInput < 0 && facingright)
+        {
+            flip();
+        }
+
 
     }
 
@@ -33,5 +43,15 @@ public class PlayerMove : MonoBehaviour
         // Move the player to the target position.
         rb.MovePosition(targetPosition);
 
+
+    }
+
+    void flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *=  -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingright = !facingright;
     }
 }
