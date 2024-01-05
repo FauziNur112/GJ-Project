@@ -19,7 +19,7 @@ public class NatapTembok : MonoBehaviour
     }
 
 
-
+    //Cek apakah player menabrak tembok dan jika benar, maka akan randomize next stage 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

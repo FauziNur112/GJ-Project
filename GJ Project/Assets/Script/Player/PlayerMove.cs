@@ -12,7 +12,9 @@ public class PlayerMove : MonoBehaviour
     public bool facingright = true;
     public float jumpingPower = 16f;
     [SerializeField] Transform groundCheck;
+    [SerializeField] Transform nemplekCheck;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask tembokLayer;
     float horizontalInput;
 
     // Start is called before the first frame update
@@ -29,6 +31,7 @@ public class PlayerMove : MonoBehaviour
 
 /*        movement = new Vector2(horizontalInput).normalized;*/
 
+        //Cek arah hadap player agar flip sprite karakter
         if (horizontalInput > 0 && !facingright)
         {
             flip();
@@ -38,17 +41,24 @@ public class PlayerMove : MonoBehaviour
             flip();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGround())
+        //Lompat
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = new Vector2 (rb.velocity.x, jumpingPower);
-            Debug.Log("IsJumping");
+            if (IsGround() || NempelTembok())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                Debug.Log("IsJumping");
+            }
+
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && rb.velocity.y > 0f)
+        if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y* 0.5f);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y* 0.3f);
         }
 
+
+        //Lari
         if (horizontalInput !=  0 && Input.GetKeyDown(KeyCode.LeftShift))
         {
             running = true;
@@ -59,9 +69,15 @@ public class PlayerMove : MonoBehaviour
 
     }
 
+    //Cek apakah player menyentuh tanah
     public bool IsGround()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 1.5f, groundLayer);
+    }
+
+    public bool NempelTembok()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 1.5f, tembokLayer);
     }
 
     void FixedUpdate()
@@ -71,6 +87,7 @@ public class PlayerMove : MonoBehaviour
 
                 // Move the player to the target position.
                 rb.MovePosition(targetPosition);*/
+        //Jika benar lari, maka speed lari, jika tidak maka speed berjalan
         if (running)
         {
             rb.velocity = new Vector2(horizontalInput * runSpeed, rb.velocity.y);
@@ -83,6 +100,7 @@ public class PlayerMove : MonoBehaviour
 
     }
 
+    //Fungsi flip sprite karakter player
     void flip()
     {
         Vector3 currentScale = gameObject.transform.localScale;
