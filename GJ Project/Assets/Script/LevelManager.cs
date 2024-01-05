@@ -28,17 +28,21 @@ public class LevelManager : MonoBehaviour
         int Select = 0;
         while (!LevelExist)
         {
-           Select = Random.Range(1,9);
+           Select = Random.Range(1,10);
           if (Levels.Exists(x => x == Select))
             {
                 LevelExist = true;
-                Debug.Log("Ada Level");
+                Debug.Log(Select);
                 Levels.Remove(Select);
             }
-
+          
+          if (Levels.Count == 0)
+            {
+                LevelExist = true;
+            }
         }
 
-        if (LevelExist == true)
+        if (LevelExist == true && Levels.Count > 0) 
         {
 
             SceneManager.LoadScene(Select);
