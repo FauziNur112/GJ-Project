@@ -8,6 +8,8 @@ public class PlayerMove : MonoBehaviour
     public Rigidbody2D rb;
     public float moveSpeed = 5f;
     public float runSpeed = 5f;
+    [SerializeField] int ExtraJumpValue = 1;
+    int extrajumpsisa;
     bool running;
     public bool facingright = true;
     public float jumpingPower = 16f;
@@ -29,6 +31,11 @@ public class PlayerMove : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         Debug.Log(IsGround());
 
+        if (IsGround())
+        {
+            extrajumpsisa = ExtraJumpValue;
+        }
+
 /*        movement = new Vector2(horizontalInput).normalized;*/
 
         //Cek arah hadap player agar flip sprite karakter
@@ -49,10 +56,15 @@ public class PlayerMove : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 Debug.Log("IsJumping");
             }
+            else if (Input.GetKeyDown(KeyCode.Space) && extrajumpsisa > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                extrajumpsisa--;
+            }
 
-        }
+        } 
 
-        if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0f)
+            if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y* 0.3f);
         }
