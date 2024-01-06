@@ -11,12 +11,20 @@ public class HearthSystem : MonoBehaviour
     public int life;
     [SerializeField] private bool dead = false;
 
+    [SerializeField] private float iframes;
+    [SerializeField] private int jumlahkedip;
+    private SpriteRenderer spriteplayer;
+
+    private void Awake()
+    {
+        spriteplayer = Player.GetComponent<SpriteRenderer>();
+    }
     //Fungsi mengurangi nyawa player
     public void TakeDamage(int d) 
     { 
         life -= d;
         Destroy(hearts[life].gameObject);
-        
+        StartCoroutine(Invunerability());
 
         //Jika nyawa = 0, maka akan dibawa ke scene death
         if (life < 1)
@@ -27,11 +35,26 @@ public class HearthSystem : MonoBehaviour
 
         //Membatasi integer nyawa agar tidak lebih dari yang ditentukan
         life = Mathf.Clamp(life, 0, 3);
-        Player.transform.position = respawnPoint;
+        /*Player.transform.position = respawnPoint;*/
     }
 
     public void perbaruiRespawnPoint(Vector3 point)
     {
         respawnPoint = point;
+    }
+
+    private IEnumerator Invunerability()
+    {
+        Physics2D.IgnoreLayerCollision(10, 9, true);
+
+        for (int i = 0; i < jumlahkedip; i++)
+        {
+            spriteplayer.color = new Color (1, 1, 1, 0.5f);
+            yield return new WaitForSeconds(iframes / (jumlahkedip *2));
+            spriteplayer.color = new Color(1, 1, 1, 1f);
+            yield return new WaitForSeconds(iframes / (jumlahkedip * 2));
+        }
+
+        Physics2D.IgnoreLayerCollision(10, 9, false);
     }
 }

@@ -57,7 +57,7 @@ public class PullandPush : MonoBehaviour
             Debug.Log("IsLepaskan");
         } 
 
-        if (hitswall.collider != null && !grounded)
+       /* if (hitswall.collider != null && !grounded)
         {
             tembok = hitswall.collider.gameObject;
             tembok.GetComponent<FixedJoint2D>().enabled = true;
@@ -68,7 +68,7 @@ public class PullandPush : MonoBehaviour
         {
             tembok.GetComponent<FixedJoint2D>().enabled = false;
             nempeltembok = false;
-        }
+        }*/
 
     }
 
