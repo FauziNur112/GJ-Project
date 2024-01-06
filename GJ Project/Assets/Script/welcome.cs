@@ -20,6 +20,6 @@ public class welcome : MonoBehaviour
     {
         // Tindakan yang akan dijalankan saat tombol ditekan
         // Memuat scene selanjutnya
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("MainMenu");
     }
 }
