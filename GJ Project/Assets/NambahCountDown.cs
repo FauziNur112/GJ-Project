@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NambahCountDown : MonoBehaviour
 {
-    [SerializeField] Countdown countdown;
+    [SerializeField] CountDownUI countdown;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class NambahCountDown : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            countdown.AddCountDown(20);
+            countdown.AddCountDown(30);
             Destroy(gameObject);
         }
     }

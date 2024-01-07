@@ -23,6 +23,7 @@ public class Respawn : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            PlayerPrefs.DeleteAll();
             SceneManager.LoadScene("DeathScene");
         }
     }

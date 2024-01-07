@@ -25,9 +25,10 @@ public class HearthSystem : MonoBehaviour
     private void Start()
     {
         int nyawasaatini= PlayerPrefs.GetInt("sisaNyawa", 3);
-        for (int i = 3; 3 > nyawasaatini; nyawasaatini++)
+        Debug.Log(nyawasaatini);
+        for (int i = 3; i > nyawasaatini; nyawasaatini++)
         {
-            Destroy(hearts[i+1].gameObject);
+            Destroy(hearts[nyawasaatini].gameObject);
         }
     }
     //Fungsi mengurangi nyawa player
@@ -44,6 +45,7 @@ public class HearthSystem : MonoBehaviour
         if (life < 1)
         {
             dead = true;
+            PlayerPrefs.DeleteAll();
             SceneManager.LoadScene("DeathScene");
         }
 

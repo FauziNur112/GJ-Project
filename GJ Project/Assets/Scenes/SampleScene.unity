@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &53907494 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3363999200227347743, guid: 94f838b8a51604f4d84d4e8d2ff21be0, type: 3}
-  m_PrefabInstance: {fileID: 3363999200207002937}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &97462745
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,11 +421,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &328356465 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3363999200501763912, guid: 94f838b8a51604f4d84d4e8d2ff21be0, type: 3}
-  m_PrefabInstance: {fileID: 3363999200207002937}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &440715165
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +785,11 @@ RectTransform:
   m_AnchoredPosition: {x: -18.0264, y: 3.5632}
   m_SizeDelta: {x: 10.9271, y: 3.5737}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &475468305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7107778305878761947, guid: 94f838b8a51604f4d84d4e8d2ff21be0, type: 3}
+  m_PrefabInstance: {fileID: 3363999200207002937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &532244539 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6141540090103403288, guid: 56713e26d67c329469289b7f0b261ff7, type: 3}
@@ -978,6 +973,11 @@ RectTransform:
   m_AnchoredPosition: {x: -19.83, y: -2.45}
   m_SizeDelta: {x: 15.531, y: 4.4091}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &570800408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6835265310753415143, guid: 94f838b8a51604f4d84d4e8d2ff21be0, type: 3}
+  m_PrefabInstance: {fileID: 3363999200207002937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &611591674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,11 +1767,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6121438b0d0784c90d2a4b740d22e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1193823249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3363999201366184232, guid: 94f838b8a51604f4d84d4e8d2ff21be0, type: 3}
-  m_PrefabInstance: {fileID: 3363999200207002937}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1224473668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,6 +2064,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1234896403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7420302707007178622, guid: 94f838b8a51604f4d84d4e8d2ff21be0, type: 3}
+  m_PrefabInstance: {fileID: 3363999200207002937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1277342679
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,7 +2882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 1157799758}
-  hearthSystem: {fileID: 0}
+  hearthSystem: {fileID: 1157799760}
 --- !u!61 &1691160151
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2983,7 +2983,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691160149}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abffaf55416c95043be20d20028e674a, type: 3}
   m_Name: 
@@ -3557,15 +3557,15 @@ PrefabInstance:
     - target: {fileID: 1386995300850971142, guid: 28c40f0f86eddac4c8805efede4180e4, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
-      objectReference: {fileID: 328356465}
+      objectReference: {fileID: 1234896403}
     - target: {fileID: 1386995300850971142, guid: 28c40f0f86eddac4c8805efede4180e4, type: 3}
       propertyPath: hearts.Array.data[1]
       value: 
-      objectReference: {fileID: 53907494}
+      objectReference: {fileID: 570800408}
     - target: {fileID: 1386995300850971142, guid: 28c40f0f86eddac4c8805efede4180e4, type: 3}
       propertyPath: hearts.Array.data[2]
       value: 
-      objectReference: {fileID: 1193823249}
+      objectReference: {fileID: 475468305}
     - target: {fileID: 1386995300850971162, guid: 28c40f0f86eddac4c8805efede4180e4, type: 3}
       propertyPath: m_Name
       value: GameManager
