@@ -9,6 +9,8 @@ public class PlayerMove : MonoBehaviour
 {
     Vector2 movement;
     public Rigidbody2D rb;
+    [SerializeField] Animator playerAnimation;
+
     public float moveSpeed = 5f;
     public float runSpeed = 5f;
     public float jumpingPower = 16f;
@@ -18,7 +20,7 @@ public class PlayerMove : MonoBehaviour
     private float wallJumpingTime = 0.9f;
     private float wallJumpingCounter;
     private float wallJumpingDuration = 1f;
-    private Vector2 wallJumpingPower = new Vector2(10f, 16f);
+    private Vector2 wallJumpingPower = new Vector2(25f, 16f);
 
 
     public Vector2 arahLompat;
@@ -36,42 +38,34 @@ public class PlayerMove : MonoBehaviour
     private bool isWallSliding;
     private bool isWallJumping;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+ 
 
     // Update is called once per frame
     void Update()
     {
 
         horizontalInput = Input.GetAxisRaw("Horizontal");
+        playerAnimation.SetFloat("Lari", Mathf.Abs(horizontalInput));
+        
 
         if (IsGround())
         {
             extrajumpsisa = ExtraJumpValue;
+
+            Debug.Log("ditanah");
         }
 
- /*       if (NempelTembok() && !IsGround())
+        if (rb.velocity.y == 0)
         {
-            rb.gravityScale = 15;
-            jatuhnempeltembok = false;
-        } else
-        {
-            rb.gravityScale = 10;
-        }*/
-
-        /*        movement = new Vector2(horizontalInput).normalized;*/
-
-        //Cek arah hadap player agar flip sprite karakter
-   
+            playerAnimation.SetBool("Jump", false);
+        }
 
         //Lompat
         if (Input.GetKeyDown(KeyCode.Space) && IsGround() && !isWallSliding)
         {   
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            playerAnimation.SetBool("Jump", true);
+            
             Debug.Log("IsJumping");
         }
 /*        else if (Input.GetKeyDown(KeyCode.Space) && extrajumpsisa > 0 && !NempelTembok())
@@ -182,9 +176,11 @@ public class PlayerMove : MonoBehaviour
         {
             isWallSliding = true;
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+            playerAnimation.SetBool("WallSlide", true);
         } else
         {
-            isWallSliding = false; 
+            isWallSliding = false;
+            playerAnimation.SetBool("WallSlide", false);
         }
     }
 
@@ -195,8 +191,9 @@ public class PlayerMove : MonoBehaviour
           isWallJumping = false;
           wallJumpingDirection = -transform.localScale.x;
           wallJumpingCounter = wallJumpingTime;
+            playerAnimation.SetBool("Jump", false);
 
-         CancelInvoke(nameof(StopWallJumping));
+            CancelInvoke(nameof(StopWallJumping));
         } else
         {
             wallJumpingCounter -= Time.deltaTime;
@@ -206,8 +203,9 @@ public class PlayerMove : MonoBehaviour
         {
          isWallJumping = true;
          rb.velocity = new Vector2(wallJumpingDirection* wallJumpingPower.x, jumpingPower);
-        
-        Debug.Log(rb.velocity);
+            playerAnimation.SetBool("Jump", true);
+
+            Debug.Log(rb.velocity);
          wallJumpingCounter = 0f;
 
         if (transform.localScale.x != wallJumpingDirection)
