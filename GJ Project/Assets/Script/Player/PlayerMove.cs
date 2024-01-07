@@ -48,7 +48,7 @@ public class PlayerMove : MonoBehaviour
         playerAnimation.SetFloat("Lari", Mathf.Abs(horizontalInput));
         
 
-        if (IsGround())
+        if (IsGround() || isWallSliding)
         {
             extrajumpsisa = ExtraJumpValue;
 
@@ -68,28 +68,28 @@ public class PlayerMove : MonoBehaviour
             
             Debug.Log("IsJumping");
         }
-/*        else if (Input.GetKeyDown(KeyCode.Space) && extrajumpsisa > 0 && !NempelTembok())
+        else if (Input.GetKeyDown(KeyCode.Space) && extrajumpsisa > 0 && !NempelTembok())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             extrajumpsisa--;
-        }*/
+        }
 
 
-/*        else if (Input.GetKeyDown(KeyCode.Space) && NempelTembok())
-        {
-            rb.velocity = new Vector2(20f, jumpingPower);
+        /*        else if (Input.GetKeyDown(KeyCode.Space) && NempelTembok())
+                {
+                    rb.velocity = new Vector2(20f, jumpingPower);
 
-            *//*            Vector2 jumpVelocity = new Vector2(20f, jumpingPower);
-                        rb.velocity += jumpVelocity;*/
-            /*            rb.AddForce(arahLompat * jumpingPower, ForceMode2D.Impulse);*//*
-            Debug.Log("lompat dari tembok");
-            extrajumpsisa--;
-        }*/
+                    *//*            Vector2 jumpVelocity = new Vector2(20f, jumpingPower);
+                                rb.velocity += jumpVelocity;*/
+        /*            rb.AddForce(arahLompat * jumpingPower, ForceMode2D.Impulse);*//*
+        Debug.Log("lompat dari tembok");
+        extrajumpsisa--;
+    }*/
 
-/*        if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0f && !isWallSliding)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y* 0.3f); 
-        }*/
+        /*        if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0f && !isWallSliding)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y* 0.3f); 
+                }*/
 
 
         //Lari
@@ -202,7 +202,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && wallJumpingCounter > 0f && !IsGround())
         {
          isWallJumping = true;
-         rb.velocity = new Vector2(wallJumpingDirection* wallJumpingPower.x, jumpingPower);
+         rb.velocity = new Vector2(wallJumpingDirection* 50f, jumpingPower);
             playerAnimation.SetBool("Jump", true);
 
             Debug.Log(rb.velocity);

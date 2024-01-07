@@ -15,13 +15,18 @@ public class HearthSystem : MonoBehaviour
     [SerializeField] private int jumlahkedip;
     private SpriteRenderer spriteplayer;
 
+    private float arahknockback;
+
     private void Awake()
     {
         spriteplayer = Player.GetComponent<SpriteRenderer>();
     }
     //Fungsi mengurangi nyawa player
     public void TakeDamage(int d) 
-    { 
+    {
+        arahknockback = Player.transform.localScale.x;
+        Player.GetComponent<Rigidbody2D>().velocity = new Vector2(100, 32);
+
         life -= d;
         Destroy(hearts[life].gameObject);
         StartCoroutine(Invunerability());

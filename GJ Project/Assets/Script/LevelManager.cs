@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         //Mengisi List Levels 1 - 10 sesuai stage yang ada (9). Batas atas 10 sebab bug
-        for (int i = 1; i < 10; i++)
+        for (int i = 1; i < 4; i++)
         {
             Levels.Add(i);
         }
@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour
         while (!LevelExist)
         {
             //Randomize integer dengan jarak 1 sampai 10
-           Select = Random.Range(1,10);
+           Select = Random.Range(1,5);
 
             //Cek apakah list Levels memiliki integer yang didapat dari randomize 
           if (Levels.Exists(x => x == Select))
