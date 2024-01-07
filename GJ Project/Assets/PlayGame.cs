@@ -28,7 +28,7 @@ public class PlayGame : MonoBehaviour
         }
         else {
             SceneManager.LoadScene("SampleScene");
-          /*  PlayerPrefs.SetString("savestate", "ada");*/
+            PlayerPrefs.SetString("savestate", "ada");
             Debug.Log("Membuat save state");
         }
 }
