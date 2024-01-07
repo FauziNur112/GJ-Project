@@ -722,6 +722,7 @@ GameObject:
   - component: {fileID: 192654305}
   - component: {fileID: 192654304}
   - component: {fileID: 192654303}
+  - component: {fileID: 192654307}
   m_Layer: 5
   m_Name: Image btn New Game
   m_TagString: Untagged
@@ -834,6 +835,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 192654307}
+        m_TargetAssemblyTypeName: PlayGame, Assembly-CSharp
+        m_MethodName: newgame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &192654305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,6 +885,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192654301}
   m_CullTransparentMesh: 1
+--- !u!114 &192654307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192654301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f93f648059c4fe42ad4d6b9c084b3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &221928660
 GameObject:
   m_ObjectHideFlags: 0

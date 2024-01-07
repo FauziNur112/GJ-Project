@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Respawn : MonoBehaviour
+public class DebuggingGantiLevel : MonoBehaviour
 {
-    [SerializeField] GameObject Player;
-    [SerializeField] SpawnOnLevelChange spawnOnLevelChange;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +21,7 @@ public class Respawn : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene("DeathScene");
+            SceneManager.LoadScene("LevelOne");
         }
     }
 }

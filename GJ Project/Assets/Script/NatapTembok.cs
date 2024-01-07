@@ -7,6 +7,7 @@ public class NatapTembok : MonoBehaviour
     // Start is called before the first frame update
 
     public LevelManager LevelManager;
+    [SerializeField] HearthSystem hearthSystem;
     void Start()
     {
         if (LevelManager == null)
@@ -27,6 +28,8 @@ public class NatapTembok : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            
+            PlayerPrefs.SetInt("sisaNyawa", hearthSystem.life);
             LevelManager.SelectLevel();
             Debug.Log("Menabrak");
         }
