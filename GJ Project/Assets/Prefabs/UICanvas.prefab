@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 59779497}
   - component: {fileID: 59779498}
+  - component: {fileID: 3297530521026176990}
   m_Layer: 5
   m_Name: hati
   m_TagString: Untagged
@@ -70,9 +71,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -639815939
+  m_SortingLayer: 8
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: e5eb70e0f569f2046b7812eee8f7f9f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84,6 +85,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!222 &3297530521026176990
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59779496}
+  m_CullTransparentMesh: 1
 --- !u!1 &346271806
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 346271807}
   - component: {fileID: 346271808}
+  - component: {fileID: 5397082332739702596}
   m_Layer: 5
   m_Name: tempat timer
   m_TagString: Untagged
@@ -112,7 +122,8 @@ Transform:
   m_LocalPosition: {x: 8.5973, y: 0.0156, z: 0}
   m_LocalScale: {x: 1.8090105, y: 1.2324834, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1367915185}
   m_Father: {fileID: 425914156}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -156,7 +167,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: a2dce08586b81794ab6228e8f904e057, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -168,6 +179,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!222 &5397082332739702596
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346271806}
+  m_CullTransparentMesh: 1
 --- !u!1 &425914155
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 425914156}
   - component: {fileID: 425914157}
+  - component: {fileID: 2187101660424874486}
   m_Layer: 5
   m_Name: canvas hati
   m_TagString: Untagged
@@ -194,7 +214,7 @@ Transform:
   m_GameObject: {fileID: 425914155}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -596, y: 441, z: 0}
-  m_LocalScale: {x: 51.6, y: 62, z: 41.258617}
+  m_LocalScale: {x: 51.6, y: 62, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 346271807}
@@ -257,6 +277,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!222 &2187101660424874486
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425914155}
+  m_CullTransparentMesh: 1
 --- !u!1 &700743936
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 700743937}
   - component: {fileID: 700743938}
+  - component: {fileID: 7464139664827465857}
   m_Layer: 5
   m_Name: hati (2)
   m_TagString: Untagged
@@ -327,9 +356,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -639815939
+  m_SortingLayer: 8
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: e5eb70e0f569f2046b7812eee8f7f9f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -341,6 +370,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!222 &7464139664827465857
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700743936}
+  m_CullTransparentMesh: 1
 --- !u!1 &829303285
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 829303286}
   - component: {fileID: 829303287}
+  - component: {fileID: 1899375254177328390}
   m_Layer: 5
   m_Name: idle0001.png
   m_TagString: Untagged
@@ -411,9 +449,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -639815939
+  m_SortingLayer: 8
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 7db31a7b28d426443805519866e38d1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -425,6 +463,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!222 &1899375254177328390
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829303285}
+  m_CullTransparentMesh: 1
 --- !u!1 &1131512242
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1131512243}
   - component: {fileID: 1131512244}
+  - component: {fileID: 6131259115740473575}
   m_Layer: 5
   m_Name: hati (1)
   m_TagString: Untagged
@@ -495,9 +542,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -639815939
+  m_SortingLayer: 8
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: e5eb70e0f569f2046b7812eee8f7f9f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -509,6 +556,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!222 &6131259115740473575
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131512242}
+  m_CullTransparentMesh: 1
 --- !u!1 &1367915184
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,17 +591,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367915184}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 0.010712954, y: 0.013086611, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3363999200504625318}
-  m_RootOrder: 4
+  m_Father: {fileID: 346271807}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -168, y: 439}
+  m_AnchoredPosition: {x: -0.16732788, y: -0.02}
   m_SizeDelta: {x: 205.7584, y: 82.7073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1367915189
@@ -711,8 +766,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1611588938}
+  - component: {fileID: 3471746800957666334}
   - component: {fileID: 1611588939}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,13 +783,21 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611588937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -830, y: 438.99997, z: -3713.2756}
-  m_LocalScale: {x: 74.19, y: 80.1, z: 41.258617}
+  m_LocalPosition: {x: -830, y: 438.99997, z: 0}
+  m_LocalScale: {x: 74.19, y: 80.1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3363999200504625318}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!222 &3471746800957666334
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611588937}
+  m_CullTransparentMesh: 1
 --- !u!212 &1611588939
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -774,7 +838,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: 75f2682d92c72df4c86a7498a30522cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1261,7 +1325,6 @@ RectTransform:
   - {fileID: 3363999201866470287}
   - {fileID: 3363999201868579522}
   - {fileID: 425914156}
-  - {fileID: 1367915185}
   - {fileID: 1611588938}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1289,8 +1352,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1279977625
+  m_SortingOrder: 20
   m_TargetDisplay: 0
 --- !u!114 &3363999200504625316
 MonoBehaviour:
@@ -3003,7 +3066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 39, y: -0.000061035156}
+  m_AnchoredPosition: {x: 39, y: 0}
   m_SizeDelta: {x: -1413.7, y: -775.9544}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3363999201866470284
