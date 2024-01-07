@@ -38,7 +38,26 @@ public class PlayerMove : MonoBehaviour
     private bool isWallSliding;
     private bool isWallJumping;
 
- 
+
+    [SerializeField] AudioSource runSound;
+    [SerializeField] AudioSource jumpSound;
+    [SerializeField] AudioSource wallSlideSound;
+    [SerializeField] AudioSource wallJumpSound;
+    [SerializeField] AudioSource doubleJumpSound;
+    private AudioSource audioSource;
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
+    }
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -133,7 +152,8 @@ public class PlayerMove : MonoBehaviour
 
         if (!isWallJumping)
         {
-            
+            bool isMoving = Mathf.Abs(horizontalInput) > 0.01f;
+
             /*            if (running)
                         {
                             rb.velocity = new Vector2(horizontalInput * runSpeed, rb.velocity.y);
@@ -144,9 +164,28 @@ public class PlayerMove : MonoBehaviour
             if (!isWallSliding)
             {
                 rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
-                
-            }
 
+                if (isMoving)
+                {
+                    // Play run sound if the player is moving
+                    if (!runSound.isPlaying)
+                    {
+                        runSound.Play();
+                    }
+                }
+                else
+                {
+                    // Stop run sound if the player is not moving
+                    runSound.Stop();
+                }
+
+                // runSound.Play();
+            }
+            else
+            {
+                // Stop run sound if the player is wall sliding
+                runSound.Stop();
+            }
 
         }
 
