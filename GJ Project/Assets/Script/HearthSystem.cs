@@ -44,6 +44,7 @@ public class HearthSystem : MonoBehaviour
         if (life < 1)
         {
             dead = true;
+            PlayerPrefs.DeleteAll();
             SceneManager.LoadScene("DeathScene");
         }
 

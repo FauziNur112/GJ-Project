@@ -73,15 +73,15 @@ public class PlayerMove : MonoBehaviour
             if (IsGround())
             {
                 isWallSliding = false;
-                playerAnimation.SetBool("Jump", false);
+                
             }
            
         }
 
-/*        if (rb.velocity.y < 2f)
+        if (rb.velocity.y == 0f)
         {
             playerAnimation.SetBool("Jump", false);
-        }*/
+        }
 
         //Lompat
         if (Input.GetKeyDown(KeyCode.Space) && IsGround() && !isWallSliding)
