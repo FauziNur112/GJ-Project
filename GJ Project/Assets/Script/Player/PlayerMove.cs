@@ -84,13 +84,16 @@ public class PlayerMove : MonoBehaviour
         {   
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             playerAnimation.SetBool("Jump", true);
-            
+
             Debug.Log("IsJumping");
+            jumpSound.Play();
         }
         else if (Input.GetKeyDown(KeyCode.Space) && extrajumpsisa > 0 && !NempelTembok())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             extrajumpsisa--;
+
+            doubleJumpSound.Play();
         }
 
 
@@ -216,6 +219,8 @@ public class PlayerMove : MonoBehaviour
             isWallSliding = true;
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
             playerAnimation.SetBool("WallSlide", true);
+
+            wallSlideSound.Play();
         } else
         {
             isWallSliding = false;
@@ -257,6 +262,7 @@ public class PlayerMove : MonoBehaviour
 
             Invoke(nameof(StopWallJumping), wallJumpingDuration);
 
+            wallJumpSound.Play();
         }
     }
 
