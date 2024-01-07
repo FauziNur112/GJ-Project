@@ -21,6 +21,15 @@ public class HearthSystem : MonoBehaviour
     {
         spriteplayer = Player.GetComponent<SpriteRenderer>();
     }
+
+    private void Start()
+    {
+        int nyawasaatini= PlayerPrefs.GetInt("sisaNyawa", 3);
+        for (int i = 3; 3 > nyawasaatini; nyawasaatini++)
+        {
+            Destroy(hearts[i+1].gameObject);
+        }
+    }
     //Fungsi mengurangi nyawa player
     public void TakeDamage(int d) 
     {
