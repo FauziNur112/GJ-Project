@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Respawn : MonoBehaviour
 {
     [SerializeField] GameObject Player;
-    [SerializeField] SpawnOnLevelChange spawnOnLevelChange;
+    
     // Start is called before the first frame update
     void Start()
     {
