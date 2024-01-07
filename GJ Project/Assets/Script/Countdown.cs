@@ -37,4 +37,9 @@ public class Countdown : MonoBehaviour
     {
         countdownTime = alokasiCD;
     }
+
+    public void AddCountDown(int tambahCD)
+    {
+        countdownTime += tambahCD;
+    }
 }
