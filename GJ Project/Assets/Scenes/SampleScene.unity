@@ -2860,8 +2860,6 @@ GameObject:
   - component: {fileID: 1691160152}
   - component: {fileID: 1691160151}
   - component: {fileID: 1691160150}
-  - component: {fileID: 1691160154}
-  - component: {fileID: 1691160155}
   m_Layer: 0
   m_Name: Mock Up Ganti Level
   m_TagString: Untagged
@@ -2876,7 +2874,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691160149}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eff0be0d6f1ab2045a03865cce79c541, type: 3}
   m_Name: 
@@ -2976,30 +2974,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1691160154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691160149}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abffaf55416c95043be20d20028e674a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1691160155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691160149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab47b95c5af2f04595a6bcd850ab119, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1740830018
 GameObject:
   m_ObjectHideFlags: 0
@@ -3555,6 +3529,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 809069312}
     - target: {fileID: 1386995300850971142, guid: 28c40f0f86eddac4c8805efede4180e4, type: 3}
+      propertyPath: spriteplayer
+      value: 
+      objectReference: {fileID: 4115816543219420840}
+    - target: {fileID: 1386995300850971142, guid: 28c40f0f86eddac4c8805efede4180e4, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
       objectReference: {fileID: 1234896403}
@@ -3810,6 +3788,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89e048b39ab6474dae739e9a4d1279c, type: 3}
+--- !u!212 &4115816543219420840 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4115816542954612132, guid: e89e048b39ab6474dae739e9a4d1279c, type: 3}
+  m_PrefabInstance: {fileID: 4115816543219420839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5081637041175205654
 PrefabInstance:
   m_ObjectHideFlags: 0

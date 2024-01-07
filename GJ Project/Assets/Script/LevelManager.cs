@@ -55,7 +55,7 @@ public class LevelManager : MonoBehaviour
         //Maka akan dibawa ke level tersebut
         if (LevelExist == true && Levels.Count > 0) 
         {
-
+            Debug.Log(Select);
             SceneManager.LoadScene(Select);
         }
 

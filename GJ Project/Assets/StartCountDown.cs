@@ -5,7 +5,7 @@ using UnityEngine;
 public class StartCountDown : MonoBehaviour
 {
     [SerializeField] CountDownUI countdown;
-    public float  StartCount;
+    public float StartCount;
     // Start is called before the first frame update
     void Start()
     {

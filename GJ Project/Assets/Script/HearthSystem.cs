@@ -13,13 +13,13 @@ public class HearthSystem : MonoBehaviour
 
     [SerializeField] private float iframes;
     [SerializeField] private int jumlahkedip;
-    private SpriteRenderer spriteplayer;
+    public SpriteRenderer spriteplayer;
 
     private float arahknockback;
 
     private void Awake()
     {
-        spriteplayer = Player.GetComponent<SpriteRenderer>();
+    
     }
 
     private void Start()
