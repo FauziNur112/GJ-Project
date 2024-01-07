@@ -172,7 +172,7 @@ public class PlayerMove : MonoBehaviour
 
     private void WallSlide()
     {
-        if (NempelTembok() && !IsGround() && horizontalInput != 0f)
+        if (NempelTembok() && horizontalInput != 0f)
         {
             isWallSliding = true;
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
@@ -199,7 +199,7 @@ public class PlayerMove : MonoBehaviour
             wallJumpingCounter -= Time.deltaTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && wallJumpingCounter > 0f && !IsGround())
+        if (Input.GetKeyDown(KeyCode.Space) && wallJumpingCounter > 0f )
         {
          isWallJumping = true;
          rb.velocity = new Vector2(wallJumpingDirection* 50f, jumpingPower);
