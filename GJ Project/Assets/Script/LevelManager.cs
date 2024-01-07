@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour
         while (!LevelExist)
         {
             //Randomize integer dengan jarak 1 sampai 10
-           Select = Random.Range(1,5);
+           Select = Random.Range(1,4);
 
             //Cek apakah list Levels memiliki integer yang didapat dari randomize 
           if (Levels.Exists(x => x == Select))
