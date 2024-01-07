@@ -70,8 +70,11 @@ public class PlayerMove : MonoBehaviour
         if (IsGround() || isWallSliding)
         {
             extrajumpsisa = ExtraJumpValue;
-
-            Debug.Log("ditanah");
+            if (IsGround())
+            {
+                isWallSliding = false;
+            }
+           
         }
 
         if (rb.velocity.y == 0)
@@ -220,7 +223,7 @@ public class PlayerMove : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
             playerAnimation.SetBool("WallSlide", true);
 
-            wallSlideSound.Play();
+           /* wallSlideSound.Play();*/
         } else
         {
             isWallSliding = false;

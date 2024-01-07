@@ -9,7 +9,10 @@ public class NatapTembok : MonoBehaviour
     public LevelManager LevelManager;
     void Start()
     {
-        
+        if (LevelManager == null)
+        {
+            LevelManager = FindObjectOfType<LevelManager>();
+        }
     }
 
     // Update is called once per frame
