@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NambahCountDown : MonoBehaviour
+public class stopCountDown : MonoBehaviour
 {
-    [SerializeField] CountDownUI countdown;
+    [SerializeField] CountDownUI countdownUI;
+    public float lastCountdown;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +22,9 @@ public class NambahCountDown : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            countdown.AddCountDown(30);
-            Destroy(gameObject);
+            lastCountdown = countdownUI.countdownTime;
+            PlayerPrefs.SetFloat("lastCD", lastCountdown);
+            countdownUI.SetCountDown(0);
         }
     }
 }

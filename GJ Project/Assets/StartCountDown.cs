@@ -5,7 +5,7 @@ using UnityEngine;
 public class StartCountDown : MonoBehaviour
 {
     [SerializeField] CountDownUI countdown;
-    public int StartCount;
+    public float  StartCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +22,13 @@ public class StartCountDown : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            float lastCD = PlayerPrefs.GetFloat("lastCD", 3);
+            if (lastCD != 3)
+            {
+                StartCount += lastCD;
+            }
             countdown.SetCountDown(StartCount);
-            countdown.gameObject.SetActive(true);
+            
         }
     }
 }

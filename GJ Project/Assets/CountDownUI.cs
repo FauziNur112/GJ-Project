@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class CountDownUI : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI countdownText;
-    [SerializeField] float countdownTime;
+    public float countdownTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +21,13 @@ public class CountDownUI : MonoBehaviour
         if (countdownTime > 0)
         {
             countdownTime -= Time.deltaTime;
-            countdownText.color = Color.white;
+            countdownText.color = Color.black;
         }
         else if (countdownTime < 0)
         {
             countdownTime = 0;
             countdownText.color = Color.red;
+            PlayerPrefs.DeleteAll();
             SceneManager.LoadScene("deathScene");
         }
 
@@ -36,7 +37,7 @@ public class CountDownUI : MonoBehaviour
         countdownText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    public void SetCountDown(int alokasiCD)
+    public void SetCountDown(float alokasiCD)
     {
         countdownTime = alokasiCD;
     }
